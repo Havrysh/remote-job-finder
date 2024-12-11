@@ -1,0 +1,6 @@
+{
+  "endOfLine": "auto",
+  "printWidth": 100,
+  "importOrder": ["^react$", "<THIRD_PARTY_MODULES>", "^@src/(.*)$", "^[./]"],
+  "importOrderSeparation": true
+}

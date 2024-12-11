@@ -1,11 +1,21 @@
+import { useSearchTextContext } from "../lib/hooks.ts";
+
 export default function SearchForm() {
+  const { searchText, handleChangeSearchText } = useSearchTextContext();
+
   return (
-    <form action="#" className="search">
+    <form
+      onSubmit={(event) => event.preventDefault()}
+      action="#"
+      className="search"
+    >
       <button type="submit">
         <i className="fa-solid fa-magnifying-glass"></i>
       </button>
 
       <input
+        value={searchText}
+        onChange={(event) => handleChangeSearchText(event.target.value)}
         spellCheck="false"
         type="text"
         required
